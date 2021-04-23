@@ -24,7 +24,19 @@
     text-align: center;
     color: white;
     font-size: 60px;
+    
+  }
 
+  @keyframes slidein {
+    from {
+      margin-right: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-right: 0%;
+      width: 100%;
+    }
   }
 
   .topright {
@@ -36,6 +48,8 @@
     color: white;
     font-size: 24px;
     margin-right: 5rem;
+    animation-duration: 3s;
+    animation-name: slidein;
   }
 
   #price {
@@ -49,6 +63,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    animation: reveal 2s ease;
+
   }
 
   .bg-text h6 {
@@ -59,6 +75,11 @@
   .bg-text  h1 {
     font-size: 100px;
     font-weight: bolder;
+  }
+  @keyframes reveal {
+    0% {
+      transform: translateY(300px);
+    }
   }
 
   .bg-text > h3 {
@@ -121,6 +142,7 @@
     font-size: 60px;
     color: #E17E31;
     text-align: center;
+
   }
 
   .category h2 {
