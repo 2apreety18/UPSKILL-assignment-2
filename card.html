@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Landing Page</title>
+
+    <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand';
+      background-color: #F2F5F8;
+    }
+
+    .bg-image {
+      background-image: url("assets/images/background.png");
+      height: 1080px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    .topleft {
+      position: absolute;
+      top: -2.3rem;
+      left: 10rem;
+      text-align: center;
+      color: white;
+      font-size: 60px;
+
+    }
+
+    .topright {
+      display: grid;
+      grid-template-rows: 2px 2px;
+      position: absolute;
+      right: 15rem;
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      margin-right: 5rem;
+    }
+
+    #price {
+      margin-right: -18rem;
+    }
+ 
+    .bg-text {
+      text-align: center;
+      position: absolute;
+      top: 32%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+    }
+
+    .bg-text h6 {
+      font-size: 24px;
+      margin-top: -4rem;
+    }
+      
+    .bg-text  h1 {
+      font-size: 100px;
+      font-weight: bolder;
+    }
+
+    .bg-text > h3 {
+      font-size: 30px;
+      font-weight: bolder;
+      margin-top: -2.3rem;
+      margin-bottom: 0.8rem;
+    }
+
+
+    form.example input[type=text] {
+      padding: 20px;
+      font-size: 17px;
+      border: 10px solid #FFFFFF;
+      width: 180%;
+      background: #FFFFFF;
+      border-radius: 10px;
+    }
+
+    ::placeholder {
+      color: #25374B;
+      font-size: 20px;
+    }
+
+    .bg-text .searchbutton {
+      position: relative;
+      right: -17rem;
+      top: -5.66rem;
+      width: 35%;
+      height: 40%;
+      padding: 20px;
+      background: #FF9100;
+      color: white;
+      font-size: 25px;
+      border: 1px solid #FFFFFF;
+      border-radius: 10px;
+      border-left: none;
+      cursor: pointer;
+    }
+
+    .bg-text .searchbutton:hover {
+      background: #25374B;
+    }
+
+    form.example::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+
+    .category {
+      text-align: center;
+      height: 720px;
+      background-color: #FFFFFF;
+      margin-top: -3.1rem;
+    }
+
+      h2 {
+      font-size: 60px;
+      color: #E17E31;
+      text-align: center;
+    }
+
+    .category h2 {
+      font-size: 60px;
+      color: #E17E31;
+      text-align: center;
+      padding-top: 5rem;
+    }
+
+    .category img {
+      width: 50%;
+    }
+
+    .category p {
+      margin-top: -1rem;
+      margin-bottom: 3rem;
+      color: #25374B;
+      font-size: 18px;
+      padding: 0.5rem;
+    }
+    
+
+    .row > .column {
+      padding: 0 8px;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .column {
+      margin-right: -23rem;
+      margin-left: 15.5rem;
+      float: left;
+      width: 20%;
+    }
+
+    .column h4 {
+      font-weight: bolder;
+    }
+
+    /* Best selling cards*/
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 30px 20px 30px 10px;
+      margin-left: 10rem;
+      background-color: #F2F5F8;
+    }
+
+    .card {
+      width: 425px;
+      height: 300px;
+      margin-bottom: 10px;
+    }
+
+
+    .fakeimg img{
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .card-bottom {
+      position: relative;
+      bottom: 3rem;
+    }
+    .upper > h3 {
+      font-size: 16px;
+      font-weight: bolder;
+      padding-top: 15px;
+    }
+
+   
+
+    .upper > h3:nth-child(1) {
+      color: black;
+      float: left;
+      margin-left: 5px;
+    }
+
+    .upper > h3:nth-child(2) {
+      color: #E17E31;
+      float: right;
+      margin-right: 5px;
+    }
+   
+    .checked {
+      color: orange;
+    }
+
+    .rating {
+      padding-top: 4.3rem;
+      font-size: 8px;
+      position: relative;
+      top: -1rem;
+      left: 0.3rem;
+    }
+
+    .button {
+      border: none;
+      background-color: #FFFFFF;
+      color: black;
+      margin-top: -5rem;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      position: relative;
+      top: -2.5rem;
+      left: 0.5rem;
+    }
+
+    .about{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .aboutdesp {
+      float: left;
+      padding: 2rem;
+      margin-top: 1rem;
+      margin-left: 11.5rem;
+    }
+    .aboutdesp p {
+      font-size: 12px;
+      color: #25374B;
+    }
+    .aboutimg {
+      float: right;
+      padding: 1.5rem;
+      margin-top: 1rem;
+    }
+    .about img {
+      width: 65%;
+      height: auto;
+    }
+
+        /* Style inputs */
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid white;
+      border-radius: 5px;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    input[type=submit] {
+      background-color: #E17E31;
+      color: white;
+      width: 100%;
+      padding: 18px 20px;
+      margin-top: 2rem;
+      border: 1px solid white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: gray;
+    }
+
+    /* Style the container/contact section */
+    .container {
+      width: 950px;
+      border-radius: 5px;
+      background-color: #E17E31;
+      color: white;
+      padding: 1rem;
+      margin-left: 13.5rem;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    input[type=checkbox] {
+      margin-top: 16px;
+    }
+
+    /* Create two columns that float next to eachother */
+    .newscolumn {
+      float: left;
+      width: 50%;
+      margin-top: 6px;
+      padding: 20px;
+    }
+
+    .newscolumn h3 {
+      color: white;
+      font-size: 35px;
+      font-weight: bolder;
+      margin: 3rem;
+      padding: 2rem;
+
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    ::placeholder {
+      font-size: 12px;
+    }
+
+
+    .footer {
+      overflow: hidden;
+      background-color: #25374B;
+     
+      width: 100%;
+      height: 10%;
+      margin-top: 4rem;
+    }
+
+    .footer a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 20px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .footer a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .footer .icon {
+      display: none;
+    }
+
+    .footer a {
+      font-size: 30px;
+    }
+
+    .footer a:first-child {
+      margin-left: 12.5rem;
+    }
+
+
+    .footer a:last-child {
+      margin-right: 14rem;
+      font-weight: bolder;
+    }
+   
+
+     
+  
+
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+
+    .wrapper {
+    grid-template-columns: 1fr;
+    }
+    .card {
+    margin: 30px;
+    }
+
+    .newscolumn, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+   }
+
+  }
+
+
+  @media screen and (max-width: 700px) {
+
+    .bg-image {
+      height: 900px;
+    }
+
+    .bg-text {
+      top: 40%;
+    }
+
+    .topleft {
+      position: absolute;
+      top: -2.9rem;
+      left: 2rem;
+
+    }
+
+    .topright {
+      right: 6rem;
+      margin-right: 0rem;
+    }
+
+    #price {
+      margin-right: -12rem;
+    }
+ 
+    form.example input[type=text] {
+      padding: 20px;
+      border: 10px solid #FFFFFF;
+      width: 120%;
+    }
+
+    .bg-text .searchbutton {
+      right: -8.7rem;
+      top: -4.66rem;
+      width: 25%;
+      height: 30%;
+    }
+
+    .row > .column {
+      padding: 0 8px;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .column {
+      float: left;
+      width: 25%;
+    }
+
+    .cursor {
+      cursor: pointer;
+    }
+    
+    img.hover-shadow {
+      transition: 0.3s;
+    }
+
+    .hover-shadow:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+
+    .category {
+      height: 500px;
+    }
+
+    .category h2 {
+      font-size: 50px;
+    }
+
+    .category img {
+      width: 70%;
+    }
+
+    .category p {
+      margin-top: -1rem;
+      margin-bottom: 3rem;
+      font-size: 15px;
+      
+    }
+
+    .column {
+      margin-right: -0.1rem;
+      margin-left: 0.1rem;
+      width: 20%;
+    }
+
+    .column h4 {
+      font-size: 15px;
+    }
+
+
+
+
+
+
+  }
+
+
+    </style>
+</head>
+<body>
+
+  <div class="bg-image">
+
+    <div class="navbar">
+      <h2 class="topleft">Logo</h2>
+      <div class="topright">
+       <h4 style="top: 0.5rem;">Sign Up</h4>
+       <h4 id="price"><i class="fa fa-shopping-cart"></i> 50$</h4>
+      </div>
+    </div>
+
+    <div class="bg-text">
+      <h1>Hungry?<br>We got you</h1>
+      <h3>Order Delivery</h3>
+      <div class="search" style="position: absolute; margin-left: 2rem;">
+        <form class="example" action="/action_page.php">
+            <input type="text" placeholder="Enter your location" name="search2">
+        </form>
+            <button class="searchbutton" type="submit"><i class="fa fa-search"></i></button>
+            <h6><i class="fa fa-paper-plane"></i> Find your location</h6>
+      </div>
+    </div>
+  </div>
+
+
+<div class="category">
+ <h2 style="text-align:center">Food Categories</h2>
+ <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's<br>
+  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make<br>a type specimen book.</p>
+  <div class="row">
+    <div class="column">
+      <img src="assets/images/photo-1568901346375-23c9450c58cd.png" class="hover-shadow cursor">
+      <h4>Category 1</h4>
+    </div>
+    <div class="column">
+      <img src="assets/images/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2014__06__tuna-pasta-tomato-olives-horiz-a-1800-bacd443da10e41ebb50e44b.png" class="hover-shadow cursor">
+      <h4>Category 2</h4>
+    </div>
+    <div class="column">
+      <img src="assets/images/Veganuary-anticipates-350-000-sign-ups-as-plant-based-bandwagon-begins-New-Year-on-high.png" class="hover-shadow cursor">
+      <h4>Category 3</h4>
+    </div>
+    <div class="column">
+      <img src="assets/images/prawn-jambalaya-0c12647.png" class="hover-shadow cursor">
+      <h4>Category 4</h4>
+    </div>
+    <div class="column">
+      <img src="assets/images/photo-1571091718767-18b5b1457add.png" class="hover-shadow cursor">
+      <h4>Category 5</h4>
+    </div>
+  </div>
+</div>
+
+
+<h2 style="text-align:center">Best Selling</h2>
+<div class="wrapper">
+  <!-- ROW 1 -->
+ 
+     <div class="card" style="margin-left: 3.5rem; ">
+         <div class="fakeimg">
+           <img src="assets/images/opt.png"></img>
+           <button class="button">Buy</button>
+         </div>  
+         <div class="card-bottom">
+           <div class="upper">
+            <h3>Name One</h3>
+            <h3>3.00$</h3>
+           </div>
+             <div class="rating">
+              <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star"></span>
+               </div>
+         </div>
+     </div>
+     <div class="card"  style="margin-left: -4rem;">
+         <div class="fakeimg">
+           <img src="assets/images/mae-mu-I7A_pHLcQK8-unsplash.png"></img>
+           <button class="button">Buy</button>
+          </div>  
+         <div class="card-bottom">
+          <div class="upper">
+            <h3>Name Two</h3>
+            <h3>2.50$</h3>
+           </div>
+             <div class="rating">
+              <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star"></span>
+               </div>
+         </div>
+     </div>
+   
+  <!-- ROW 2 -->
+ 
+   <div class="card" style="margin-left: 3.5rem;">
+       <div class="fakeimg">
+         <img src="assets/images/photo.png"></img>
+         <button class="button">Buy</button>
+        </div>  
+       <div class="card-bottom">
+        <div class="upper">
+          <h3>Name Three</h3>
+          <h3>3.00$</h3>
+         </div>
+           <div class="rating">
+           <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+            </div>
+       </div>
+   </div>
+   <div class="card" style="margin-left: -4rem;">
+       <div class="fakeimg">
+         <img src="assets/images/Veganuary.png"></img>
+         <button class="button">Buy</button>
+      </div>  
+       <div class="card-bottom">
+        <div class="upper">
+          <h3>Name Four</h3>
+          <h3>2.50$</h3>
+         </div>
+           <div class="rating">
+            <span class="fa fa-star checked"></span>
+               <span class="fa fa-star checked"></span>
+               <span class="fa fa-star checked"></span>
+               <span class="fa fa-star checked"></span>
+               <span class="fa fa-star"></span>
+             </div>
+       </div>
+   </div>   
+ </div>
+
+
+
+ <div class="about">
+   <div class="aboutdesp">
+      <h2 style="text-align:left">About Us</h2>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br><br> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      </p>
+    </div>
+    <div class="aboutimg"><img src="assets/images/louis-hansel-shotsoflouis-0sYLBZjgTTw-unsplash.png"></img></div>
+ </div>
+
+
+ <div class="container">
+  <div class="row">
+    <div class="newscolumn">
+      <h3>Stay<br>Connected</h3>
+    </div>
+    <div class="newscolumn">
+      <form action="/action_page.php">
+        <input type="text" id="fname" name="firstname" placeholder="First Name">
+        <input type="text" id="lname" name="lastname" placeholder="Last Name">
+        <input type="text" id="email" name="email" placeholder="Email">
+        <label>
+      	<input type="checkbox"  name="subscribe"> I agree to receive newsletter
+   		 </label>
+         <div class="subbutton">
+    		<input type="submit" value="SUBMIT">
+  		</div>
+      </div>
+
+      </form>
+    </div>
+  </div>
+
+
+  <div class="footer">
+    <a href="#home"><i class="fa fa-facebook-square"></i></a>
+    <a href="#news"><i class="fa fa-hashtag"></i></a>
+    <a href="#contact"><i class="fa fa-instagram"></i></a>
+    <a href="#about"><i class="fa fa-youtube"></i></a>
+    <a href="#logo" style="float: right;">LOGO</a>
+  </div>
+
+
+
+
+
+
+
+
+</div>
+ 
+
+</body>
+</html>
